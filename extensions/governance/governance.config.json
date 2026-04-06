@@ -1,0 +1,49 @@
+{
+  "$schema": "./governance.schema.json",
+  "enabled": true,
+  "strictMode": true,
+  "requireSignature": true,
+  "blockedTools": [],
+  "allowedSubagentLabels": [
+    "prometheus",
+    "faber",
+    "janus",
+    "vita",
+    "aurum"
+  ],
+  "requireSubagentSignature": true,
+  "signatureTemplate": "[{emoji}]",
+  "agents": {
+    "prometheus": {
+      "emoji": "🔥",
+      "name": "Prometheus",
+      "role": "programador"
+    },
+    "faber": {
+      "emoji": "⚙️",
+      "name": "Faber",
+      "role": "executor"
+    },
+    "janus": {
+      "emoji": "🎯",
+      "name": "Janus",
+      "role": "coordenador"
+    },
+    "vita": {
+      "emoji": "✨",
+      "name": "Vita",
+      "role": "tarefas"
+    },
+    "aurum": {
+      "emoji": "💎",
+      "name": "Aurum",
+      "role": "qualidade"
+    },
+    "_comment": "Adicione novos agentes abaixo seguindo o mesmo padrão",
+    "example_new_agent": {
+      "emoji": "🚀",
+      "name": "NovoAgente",
+      "role": "especialista"
+    }
+  }
+}
