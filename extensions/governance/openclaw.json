@@ -1,0 +1,21 @@
+{
+  "name": "governance",
+  "version": "1.0.0",
+  "description": "Governança de agentes: assinaturas obrigatórias, validação de tool calls e controle de subagentes",
+  "main": "src/index.js",
+  "activation": {
+    "hooks": [
+      "before_tool_call",
+      "subagent_spawning",
+      "before_agent_reply"
+    ]
+  },
+  "config": {
+    "enabled": true,
+    "strictMode": true,
+    "requireSignature": true,
+    "blockedTools": ["write", "edit", "exec"],
+    "allowedSubagentLabels": ["prometheus", "faber", "janus", "vita", "aurum"],
+    "requireSubagentSignature": true
+  }
+}
